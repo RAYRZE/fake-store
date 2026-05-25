@@ -7,38 +7,69 @@
 
         <link rel="stylesheet" href="css/style.css">
 
-        <script src="asset/script.js"></script>
+        <script src="js/script.js" defer></script>
     </head>
     <body>
         <div class="container-product">
             <div class="navbar">
-                <h1>test</h1>
-                <h2>test</h2>
+                <div class="logo">RZ</div>
+            <div class="search-container">
+
+                <input 
+                    class="search-bar"
+                    placeholder="Search product....."
+                    id="search"
+                >
+
+                <button class="search-btn" id="search-btn">
+                🔍
+                </button>
+
+                </div>
+                <button class="cart" id="cart">🛒 cart </button>
             </div>
             <hr class="hr">
             <div class="container-categories">
                 <div class="categories-box">
-                    <h1>TEST</h1>
-                    <h2>test</h2>
+                    <p>categories :</p>
+                    <button class="categories" data-category="all">
+                        all
+                    </button>
+                    <button class="categories" data-category="electronics">
+                        electronic
+                    </button>
+                    <button class="categories" data-category="jewelery">
+                        jewelery
+                    </button>
+                    <button class="categories"data-category="men's clothing">
+                        men's
+                    </button>
+                    <button class="categories"data-category="women's clothing">
+                        women's
+                    </button>
                 </div>
                 <hr class="hr">
             </div>
-            <div class="product">
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
+            <div class="product" id="product-container">
             </div>
             <div class="pagination">
-                <h1>test</h1>
-                <h2>test</h2>
+                <div class="pagination-box">1</div> 
+                <div class="pagination-box">2</div>
+                <div class="pagination-box">3</div>
             </div>
         </div>
-        <div class="list-buy">
+        <div class="list-buy hidden">
             <div class="your-cart">
-                <p>your cart</p>
+                <p class="bold">your cart</p>
+                <div class="cart-header">
+                    <p class="product-info">product</p>
+                    <p class="qty">qty</p>
+                    <p class="price">price</p>
+                    <p class="total">total</p>
+                </div>
+                <div class="cart-container">
+
+                </div>
             </div>
         </div>
     </body>
