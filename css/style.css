@@ -233,20 +233,71 @@ body{
 }
 .qty{
     width: 80px;
+    text-align: center;
+    font-size: 14px;
 }
 
+.qty-button {
+  padding: 12px;
+  border: none;
+  background-color: #fafafa;
+  font-size: 14px;
+}
 .price{
     width: 80px;
+    text-align: center;
 }
 .product-info {
     display: flex;
     align-items: center;
     gap: 12px;
     width: 220px;
+    overflow-wrap: break-word;
+}
+.total {
+    width: 80px;
+    text-align: center;
+}
+.total-price {
+    display: flex;
+    justify-content: space-between;
+}
+.textPrice {
+    width: 50%;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+.NumberPrice {
+    width: 50%;
+    text-align: right;
+    justify-content: center;
+    align-items: center;
 }
 .img-product {
     width: 50px;
     height: 60px;
+}
+.checkout-box {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.checkout {
+    width: 90%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f97316;
+    border-radius: 12px;
+    transition: 0.3s;
+    transform: translateY(0);
+}
+.checkout:active {
+    scale: 0.9;
 }
 .bold {
     font-weight: bold;
