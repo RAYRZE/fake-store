@@ -1,85 +1,100 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RRZE Store</title>
-
-        <link rel="stylesheet" href="css/style.css">
-
-        <script src="js/script.js" defer></script>
-    </head>
-    <body>
-        <div class="container-product">
-            <div class="navbar">
-                <div class="logo">RZ</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRZE Store - Online Shopping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Main Product Container -->
+    <div class="container-product">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <!-- Brand Logo -->
+            <div class="logo">RZ</div>
+            
+            <!-- Search Section -->
             <div class="search-container">
-
                 <input 
                     class="search-bar"
-                    placeholder="Search product....."
+                    placeholder="Search products..."
                     id="search"
+                    aria-label="Search products"
                 >
-
-                <button class="search-btn" id="search-btn">
-                🔍
+                <button class="search-btn" id="search-btn" aria-label="Search">
+                    🔍
                 </button>
-
-                </div>
-                <button class="cart" id="cart">🛒 cart </button>
             </div>
-            <hr class="hr">
-            <div class="container-categories">
-                <div class="categories-box">
-                    <p>categories :</p>
-                    <button class="categories" data-category="all">
-                        all
-                    </button>
-                    <button class="categories" data-category="electronics">
-                        electronic
-                    </button>
-                    <button class="categories" data-category="jewelery">
-                        jewelery
-                    </button>
-                    <button class="categories"data-category="men's clothing">
-                        men's
-                    </button>
-                    <button class="categories"data-category="women's clothing">
-                        women's
-                    </button>
-                </div>
-                <hr class="hr">
+            
+            <!-- Cart Toggle Button -->
+            <button class="cart" id="cart" aria-label="Toggle cart">
+                🛒 Cart
+            </button>
+        </nav>
+        
+        <hr class="divider">
+        
+        <!-- Category Filter Section -->
+        <div class="container-categories">
+            <div class="categories-box">
+                <p>Categories:</p>
+                <button class="categories active" data-category="all">All</button>
+                <button class="categories" data-category="electronics">Electronics</button>
+                <button class="categories" data-category="jewelery">Jewelery</button>
+                <button class="categories" data-category="men's clothing">Men's</button>
+                <button class="categories" data-category="women's clothing">Women's</button>
             </div>
-            <div class="product" id="product-container">
+            <hr class="divider">
+        </div>
+        
+        <!-- Products Display Grid -->
+        <div class="product" id="product-container">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+        
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button class="pagination-box" aria-label="Page 1">1</button>
+            <button class="pagination-box" aria-label="Page 2">2</button>
+            <button class="pagination-box" aria-label="Page 3">3</button>
+        </div>
+    </div>
+    
+    <!-- Shopping Cart Sidebar -->
+    <aside class="list-buy hidden" id="cart-sidebar">
+        <div class="your-cart">
+            <h2 class="bold">Your Cart</h2>
+            
+            <!-- Cart Header - Column Labels -->
+            <div class="cart-header">
+                <p class="product-info">Product</p>
+                <p class="qty">Qty</p>
+                <p class="price">Price</p>
+                <p class="total">Total</p>
             </div>
-            <div class="pagination">
-                <div class="pagination-box">1</div> 
-                <div class="pagination-box">2</div>
-                <div class="pagination-box">3</div>
+            
+            <!-- Cart Items Container - Dynamic Content -->
+            <div class="cart-container" id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            
+            <hr class="divider">
+            
+            <!-- Cart Total Section -->
+            <div class="total-price">
+                <div class="textPrice bold">TOTAL:</div>
+                <div class="NumberPrice" id="total-amount">$0.00</div>
+            </div>
+            
+            <!-- Checkout Button -->
+            <div class="checkout-box">
+                <button class="checkout bold" id="checkout-btn">
+                    Checkout
+                </button>
             </div>
         </div>
-        <div class="list-buy hidden">
-            <div class="your-cart">
-                <p class="bold">your cart</p>
-                <div class="cart-header">
-                    <p class="product-info">product</p>
-                    <p class="qty">qty</p>
-                    <p class="price">price</p>
-                    <p class="total">total</p>
-                </div>
-                <div class="cart-container"></div><!--list product in cart-->
-                <hr>
-                <div class="total-price">
-                    <div class="textPrice bold"> TOTAL: </div>
-                    <div class="NumberPrice"></div>
-                </div>
-                <div class="checkout-box">
-                    <div class="checkout">
-                        <p class="bold">checkout</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </body>
+    </aside>
+</body>
 </html>
